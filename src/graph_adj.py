@@ -1,4 +1,4 @@
-class GraphListAdj:
+class GraphAdj:
     def __init__(self):
         self.adj = []
 
