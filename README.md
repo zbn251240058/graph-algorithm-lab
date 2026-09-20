@@ -1,39 +1,53 @@
-# Graph‑Algorithm‑Lab
-图算法课程实验，实现常见图论算法。
+# Graph Algorithm Lab
 
-## 已实现算法
-- 图存储：邻接表
-- 遍历：BFS、DFS
-- 最短路径：Dijkstra、Floyd‑Warshall
-- 最小生成树：Prim、Kruskal
-- 拓扑排序
+一个基于 C++17 实现的图论与图算法学习项目。
 
-## 运行环境
-Python 3.8+
+本项目用于整理《图论与算法》课程中学习的各种图数据结构和算法。
+项目采用模块化设计，所有图算法尽量基于统一的 `Graph` 类实现，
+逐步构建一个属于自己的 Graph Algorithm Library。
 
-## 运行测试
-```bash
-python test/test_graph.py
-```
+---
 
+## 1. 项目目标
 
-## 项目结构
-```
-├── src/        # 算法源码
-├── test/       # 测试用例
+本项目主要有以下几个目标：
+
+- 掌握图的数据结构设计
+- 熟悉 C++ 面向对象编程
+- 实现常见图论算法
+- 将不同算法模块化组织
+- 建立统一的 Graph 接口
+- 通过测试代码验证算法正确性
+- 逐步形成一个完整的图算法库
+
+---
+
+## 2. 项目结构
+
+```text
+graph-algorithm-lab/
+│
+├── src/
+│   │
+│   ├── graph/
+│   │   ├── Edge.h
+│   │   └── Graph.h
+│   │
+│   ├── graph_operation/
+│   │   ├── subgraph.h
+│   │   └── set_operation.h
+│   │
+│   ├── traverse/
+│   │   ├── dfs.h
+│   │   └── bfs.h
+│   │
+│   ├── connectivity/
+│       ├── connected.h
+│       └── cut.h
+|
+│
+├── test/
+│   └── test.cpp
+│
 ├── README.md
-├── .gitignore
-└── LICENSE
-```
-
-## 算法复杂度
-
-表格
-
-| BFS | \(O(V+E)\) |
-| --- | --- |
-| DFS | \(O(V+E)\) |
-| Dijkstra (堆优化) | \(O(E\log V)\) |
-| Floyd | \(O(V^3)\) |
-| Kruskal | \(O(E\log E)\) |
-| Prim | \(O(E\log V)\) |
+└── .gitignore
